@@ -1,0 +1,24 @@
+#spinner{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+
+}
+nav ul li a{
+    text-decoration: none !important; 
+    color: black;
+    font-weight: 600;
+}

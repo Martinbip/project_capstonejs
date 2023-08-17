@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!--tailwind-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--My css-->
+  <link rel="stylesheet" href="../expanded/index.css" />
+</head>
+
+<body>
+  <header class="fixed top-0 left-0 w-full bg-black">
+    <div class="container flex justify-between items-center h-20 max-w-7xl ">
+      <img src="../image/logo.png" class="w-[116px] h-[32px] bg-cover"></img>
+      <nav class="space-x-5 md:flex md:items-center">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#" class="actives">Shop</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <a href="./pay/index.html"
+          class="bg-transparent hover:bg-yellow-500 text-yellow-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+          <div class="inline-block relative">
+            <div class="t-0 absolute left-3">
+              <p id="totalProduct"
+                class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">
+                0
+              </p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="file: mt-4 h-6 w-6 relative top-1">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+          </div>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div class="container mx-auto mt-10">
+    <div class="flex mt-24">
+      <div class="w-full bg-white px-10 py-10">
+        <div class="flex justify-between border-b pb-8">
+          <h1 class="font-semibold text-2xl">Shopping Cart</h1>
+          <button onclick="removeAll()" id="removeAll"
+            class="bg-yellow-500 hover:bg-yellow-600 font-semibold text-white py-2 px-4 rounded inline-flex items-center">
+            Remove All
+          </button>
+        </div>
+        <div class="flex mt-10 mb-5">
+          <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
+          <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
+          <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
+          <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
+        </div>
+        <div id="product"></div>
+        <div class="text-right justify-between border-b border-t pb-8 pt-8">
+          <div id="notification"></div>
+
+          <div id="tableCart" class="text-right font-semibold justify-between py-6 text-sm">
+            <span class="uppercase">Total cost :</span>
+            <span class="text-red-500" id="totalProductCost"></span>
+          </div>
+          <button id="buttonCart" onclick="oderProduct()"
+            class="bg-yellow-500 font-semibold hover:bg-yellow-600 py-3 px-10 rounded-md text-sm text-white uppercase w-25">
+            Oder
+          </button>
+        </div>
+
+        <a id="linkShop" href="../index.html" class="flex font-semibold text-yellow-600 text-sm mt-10">
+          <svg class="fill-current mr-2 text-yellow-600 w-4" viewBox="0 0 448 512">
+            <path
+              d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
+          </svg>
+          Continue Shopping
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="../js/global.js"></script>
+  <script src="../js/render.js"></script>
+  <script src="../js/cart.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+    integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Tailwind Elements JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>
